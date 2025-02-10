@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.suscripcion {
+    text-align: center;
+}
+
+.plan-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+.plan-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.plan-price {
+    font-size: 28px;
+    color: #28a745;
+    margin: 10px 0;
+}
+
+.plan-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.btn-suscripcion {
+    background-color: #28a745;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-suscripcion:hover {
+    background-color: #218838;
+}
+
+.mensaje-exito {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.beneficios {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f0f8ff;
+    border-radius: 8px;
+}
+
+.beneficios ul {
+    list-style: none;
+    padding: 0;
+}
+
+.beneficios li {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}

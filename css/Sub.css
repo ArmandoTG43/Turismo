@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b3b8be;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.suscripcion {
+    text-align: center;
+}
+
+.plan-card {
+    background: #83878d;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+.plan-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0e0d0d;
+}
+
+.plan-price {
+    font-size: 28px;
+    color: #007bff;
+    margin: 10px 0;
+}
+
+.plan-price span {
+    font-size: 16px;
+    color: #06a5c9;
+}
+
+.plan-description {
+    font-size: 14px;
+    color: #2c4ac5;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.btn-suscripcion {
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-suscripcion:hover {
+    background-color: #0056b3;
+}
+
+.mensaje-exito {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+}

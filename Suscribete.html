@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suscripción - Plan Explorer</title>
+    <link rel="stylesheet" href="css/Sub.css">
+</head>
+<body>
+
+    <section class="suscripcion">
+        <div class="plan-card">
+            <h2 class="plan-title">Plan Explorer</h2>
+            <p class="plan-price">$30 <span>/mes</span></p>
+            <p class="plan-description">Accede a destinos premium, guías personalizadas y soporte 24/7.</p>
+            
+            <form id="subscription-form">
+                <input type="text" id="nombre" placeholder="Tu Nombre" required>
+                <input type="email" id="email" placeholder="Correo Electrónico" required>
+                <input type="text" id="tarjeta" placeholder="Número de Tarjeta" required>
+                <button type="submit" class="btn-suscripcion">Suscribirse</button>
+            </form>
+
+            <p id="mensaje-exito" class="mensaje-exito" style="display: none;">¡Suscripción exitosa! Redirigiendo...</p>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("subscription-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe automáticamente
+
+            // Mostrar mensaje de éxito
+            document.getElementById("mensaje-exito").style.display = "block";
+
+            // Simular un proceso de suscripción y redirigir después de 2 segundos
+            setTimeout(function() {
+                window.location.href = "index.html"; // Redirige a la página principal
+            }, 2000);
+        });
+    </script>
+
+</body>
+</html>

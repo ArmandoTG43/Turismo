@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suscripción - Plan Aventura</title>
+    <link rel="stylesheet" href="css/comienza.css">
+</head>
+<body>
+
+    <section class="suscripcion">
+        <div class="plan-card">
+            <h2 class="plan-title">Plan Aventura</h2>
+            <p class="plan-price">GRATIS</p>
+            <p class="plan-description">Obtén acceso a mapas básicos, guías en PDF y una experiencia limitada.</p>
+            
+            <form id="aventura-form">
+                <input type="text" id="nombre" placeholder="Tu Nombre" required>
+                <input type="email" id="email" placeholder="Correo Electrónico" required>
+                <button type="submit" class="btn-suscripcion">Comienza Gratis</button>
+            </form>
+
+            <p id="mensaje-exito" class="mensaje-exito" style="display: none;">¡Suscripción exitosa! Aquí están tus beneficios:</p>
+
+            <div id="beneficios" class="beneficios" style="display: none;">
+                <ul>
+                    <li> <a href="https://maps.app.goo.gl/pK1C8mPnVFzZCyMUA" target="_blank">Ver Mapas Básicos</a></li>
+                    <li><a href="https://chugchilan.gob.ec/cotopaxi/wp-content/uploads/2020/12/FINAL-PDOT-FOLLETO-1.pdf" target="_blank">Descargar Guías PDF</a></li>
+                    <li> Acceso limitado</li>
+                </ul>
+                <a href="index.html">
+                    <button>Listo</button>
+                </a>
+                
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("aventura-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita el envío automático del formulario
+
+            // Ocultar formulario
+            document.getElementById("aventura-form").style.display = "none";
+
+            // Mostrar mensaje de éxito y beneficios
+            document.getElementById("mensaje-exito").style.display = "block";
+            document.getElementById("beneficios").style.display = "block";
+        });
+    </script>
+
+</body>
+</html>
+

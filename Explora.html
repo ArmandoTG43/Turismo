@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chugchilán - Turismo y Gastronomía</title>
+    <link rel="stylesheet" href="./css/explora.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">AGENDAS CULTURALES</h1>
+            <p class="hero-subtitle">Un paraíso de tradiciones y sabores en los Andes Ecuatorianos.</p>
+        </div>
+    </header>
+
+    <!-- Sección de Destinos -->
+    <main>
+        <section class="destinos container">
+            <h2 class="subtitle">Destinos Imperdibles en Chugchilán</h2>
+            <p class="intro-paragraph">Sumérgete en la belleza de Chugchilán, donde la naturaleza y la cultura se encuentran.</p>
+
+            <div class="destino-gallery">
+                <div class="destino-item">
+                    <img src="images/fritada.jpg" alt="Hornado de Chugchilán" class="destino-image">
+                    <h3 class="destino-title">Hornado de Chugchilán</h3>
+                    <p class="destino-description">Disfruta de la deliciosa carne de cerdo asada, servida con mote y plátano frito.</p>
+                    <img src="images/tipico..png" alt="Hornado de Chugchilán" class="destino-image">
+                </div>
+
+                <div class="destino-item">
+                    <img src="images/arte.png" alt="Locro de Papa" class="destino-image">
+                    <h3 class="destino-title"> Artesanía Local</h3>
+                    <p class="destino-description">Chugchilán es conocido por su producción artesanal de textiles. Las mujeres de la comunidad suelen tejer prendas como ponchos, chales y mochilas, utilizando técnicas ancestrales que se han transmitido a lo largo de generaciones.
+                    </p>
+                </div>
+
+                <div class="destino-item">
+                    <img src="images/celebraciones.png" alt="Fritada de Chugchilán" class="destino-image">
+                    <h3 class="destino-title">Fiestas y Celebraciones Tradicionales</h3>
+                    <p class="destino-description">Fiestas Patronales: Como en muchos pueblos de Ecuador, las festividades religiosas son un aspecto fundamental de la vida de los habitantes. Las fiestas más importantes son las de la Virgen del Rosario, la patrona de Chugchilán, celebradas en octubre. Estas festividades suelen incluir procesiones, misas, danzas tradicionales, música y fuegos artificiales.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Videos -->
+        <section class="videos container">
+            <h2 class="subtitle">VIDEOS DESTACADOS</h2>
+            <p class="intro-paragraph">Mira algunos videos que muestran la belleza de nuestros destinos y platos típicos.</p>
+
+            <div class="video-gallery">
+                <!-- Video 1 -->
+                <div class="video-item">
+                    <video controls>
+                        <source src="Images/Sabores de Nuestra Tierra de la parroquia Chugchilán.mp4" type="video/mp4">
+                    </video>
+                    <p class="video-title">Preparación del Hornado</p>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-item">
+                    <video controls>
+                        <source src="Images/RUTA SACHA ÑAN (CHUGCHILÁN - LA MANÁ).mp4" type="video/mp4">
+                    </video>
+                    <p class="video-title">Senderismo y Ecoturismo</p>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="video-item">
+                    <video controls>
+                        <source src="Images/GRUPO DE DANZA NUEVA JUVENTUD DE MALQUI, PARROQUIA CHUGCHILÁN.mp4" type="video/mp4">
+                    </video>
+                    <p class="video-title"> Danzas y Música</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Botón para abrir el chat -->
+    <div class="chat-button" onclick="toggleChat()">
+        <span>¡A chatear!</span>
+    </div>
+
+    <!-- Contenedor del chat -->
+    <div class="chat-container" id="chat-container">
+        <div class="chat-header">
+            <span>Chat en Vivo</span>
+            <button class="close-btn" onclick="toggleChat()">X</button>
+        </div>
+        <div class="chat-body">
+            <div class="chat-messages" id="chat-messages">
+                <!-- Los mensajes aparecerán aquí -->
+            </div>
+            <input type="text" id="user-message" placeholder="Escribe tu mensaje..." class="chat-input">
+            <button onclick="sendMessage()" class="send-btn">Enviar</button>
+        </div>
+    </div>
+
+    <!-- Vinculación al archivo JavaScript para funcionalidad -->
+    <script>
+        // Función para mostrar u ocultar el chat
+        function toggleChat() {
+            const chatContainer = document.getElementById('chat-container');
+            chatContainer.style.display = (chatContainer.style.display === 'none' || chatContainer.style.display === '') ? 'flex' : 'none';
+        }
+
+        // Función para enviar un mensaje
+        function sendMessage() {
+            const messageInput = document.getElementById('user-message');
+            const chatMessages = document.getElementById('chat-messages');
+
+            if (messageInput.value.trim() !== '') {
+                // Crear un nuevo mensaje
+                const newMessage = document.createElement('div');
+                newMessage.classList.add('message');
+                newMessage.textContent = messageInput.value;
+
+                // Añadir el mensaje al chat
+                chatMessages.appendChild(newMessage);
+
+                // Limpiar el campo de mensaje
+                messageInput.value = '';
+
+                // Hacer que el chat se desplace hacia abajo
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+        }
+    </script>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <h3 class="footer_copyright">Derechos Reservados &copy; 2025 - Explora Zona Andina</h3>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lugares Atractivos de Isinliví</title>
+    <link rel="stylesheet" href="css/destinos.css">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Explora Isinliví</h1>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#hostales">Hostales</a></li>
+                <li><a href="#registro" class="btn">Regístrate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Explora los Destinos Destacados de Isinliví</h1>
+        </div>
+    </header>
+
+    <!-- Sección principal -->
+    <main class="container">
+        <section id="hostales" class="destacados">
+            <h2 class="section-title">HERMOSOS HOSTALES</h2>
+            <p class="section-description">Isinliví tiene secretos que esperan ser descubiertos. Estos son algunos de los destinos recomendados:</p>
+
+            <div class="grid">
+                <!-- Tarjeta 1 -->
+                <div class="card">
+                    <img src="./Images/Lllullo.png" alt="Hostal Llullu Llama" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Hostal Llullu Llama</h3>
+                        <p class="card-description">Uno de los alojamientos más populares de la zona, con vistas espectaculares, habitaciones acogedoras y excelente comida. Perfecto para quienes hacen el Quilotoa Loop.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="card">
+                    <img src="./Images/Cristobal.png" alt="Taita Cristóbal Lodge" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Taita Cristóbal Lodge</h3>
+                        <p class="card-description">Un hostal con un ambiente rústico y acogedor, ideal para los viajeros que buscan tranquilidad y contacto con la naturaleza.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="card">
+                    <img src="./Images/Mama.png" alt="Hostal Casa Mama Hilda" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Hostal Casa Mama Hilda</h3>
+                        <p class="card-description">Un acogedor hostal con ambiente familiar, comida casera deliciosa y un jardín relajante. Una excelente opción para quienes buscan descanso y contacto con la naturaleza.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 4 -->
+                <div class="card">
+                    <img src="./Images/Refugio.png" alt="Hostal Refugio del Montañero" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Hostal Refugio del Montañero</h3>
+                        <p class="card-description">Un lugar ideal para excursionistas y amantes del senderismo. Ofrece habitaciones cómodas, vista a los Andes y un ambiente tranquilo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Registro -->
+    <section id="registro" class="registro">
+        <div class="container">
+            <h2>Regístrate para recibir más información</h2>
+            <form class="registro-form">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo Electrónico" required>
+                <button type="submit" class="btn">Registrarse</button>
+            </form>
+        </div>
+    </section>
+    <!-- Botón de contacto flotante -->
+    <div id="contacto-flotante" class="contacto-flotante">
+        <button onclick="abrirModal()" class="btn-contacto">📩 Contacto</button>
+    </div>
+
+    <!-- Modal de Contacto -->
+    <div id="modal-contacto" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <h2>Contáctanos</h2>
+            <p>Déjanos un mensaje y te responderemos pronto.</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Tu Nombre" required>
+                <input type="email" placeholder="Tu Correo Electrónico" required>
+                <div>
+                    <textarea placeholder="Dejanos tu mensaje aquí..." required></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="btn">Enviar</button>
+                </div>
+               
+            </form>
+        </div>
+    </div>
+    <script>
+        function abrirModal() {
+            document.getElementById("modal-contacto").style.display = "flex";
+        }
+    
+        function cerrarModal() {
+            document.getElementById("modal-contacto").style.display = "none";
+        }
+    
+        // Cerrar el modal si el usuario hace clic fuera de él
+        window.onclick = function(event) {
+            let modal = document.getElementById("modal-contacto");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h3 class="footer_copyright">Derechos Reservados &copy; 2025 - Explora Zona Andina</h3>
+    </footer>
+    
+    
+</body>
+</html>
+
+
